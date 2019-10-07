@@ -20,3 +20,122 @@
 .App-link {
   color: #09d3ac;
 }
+
+/* Overall */
+body {
+  background: black;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  font-family: "Segoe UI Semibold";
+}
+
+/* Caesar Cipher Encryption Form */
+.caesar_cipher_form {
+  background: #111;
+  border-radius: 5px;
+  padding: 50px;
+  margin: 0 auto;
+  width: 300px;
+}
+
+/* Cipher Dial Canvas */
+.cipher_dial {
+  /*   border: 1px solid #222; */
+  border-radius: 2.5px;
+  height: 200px;
+  width: 100%;
+  display: block;
+}
+
+/* Caesar Shift Amount Label */
+.caesar_shift_amount {
+  margin: 0 auto;
+  font-size: 30pt;
+  text-align: center;
+}
+
+/* Form Plaintext TextBox */
+.caesar_cipher_form input.plaintext {
+  width: 85%;
+  background: black;
+  border: 2px solid #222;
+  border-radius: 2.5px;
+  color: white;
+  padding: 20px;
+  font-family: "Segoe UI Semibold";
+}
+
+.caesar_cipher_form input:focus {
+  border: 2px solid azure;
+}
+
+/* Form Ciphertext Output */
+.caesar_cipher_form p {
+  width: 100%;
+  font-family: "Segoe UI Semibold";
+  color: #333;
+}
+
+/* Canvas Dial Button */
+.dial_button:hover {
+  fill: #222;
+  cursor: move;
+}
+
+.dial_button:active {
+  fill: #111;
+  cursor: move;
+}
+
+#decrement {
+  float: left;
+  background: black;
+  font-size: 30pt;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #111;
+  cursor: pointer;
+}
+#decrement:hover {
+  background: white;
+  color: black;
+}
+#decrement:active {
+  background: black;
+  color: white;
+}
+
+#increment {
+  float: right;
+  background: black;
+  font-size: 30pt;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid #111;
+  cursor: pointer;
+}
+#increment:hover {
+  background: white;
+  color: black;
+}
+#increment:active {
+  background: black;
+  color: white;
+}
+
+.controls {
+  margin-bottom: 25px;
+  width: 300px;
+}
