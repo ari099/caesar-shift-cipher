@@ -230,7 +230,7 @@ const decrementDegrees = e => {
 const DecrementButton = props => {
   return (
     <button id="decrement" onClick={decrementDegrees}>
-      -
+      &#45;
     </button>
   );
 };
@@ -241,7 +241,7 @@ const DecrementButton = props => {
 const IncrementButton = props => {
   return (
     <button id="increment" onClick={incrementDegrees}>
-      +
+      &#43;
     </button>
   );
 };
