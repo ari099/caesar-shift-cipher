@@ -150,7 +150,8 @@ const PlaintextBox = props => {
       class="plaintext"
       type="text"
       placeholder="Enter text here, then turn the dial...."
-      onKeyPress={typing}
+      onKeyDown={typing}
+      onKeyUp={typing}
     />
   );
 };
