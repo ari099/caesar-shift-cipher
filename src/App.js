@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CaesarCipherMachine from './CaesarCipherMachine';
@@ -59,14 +59,16 @@ const caesar_encrypt = (plaintext, n) => {
  */
 const CipherDial = props => {
   let mouseDown = false;
+  let [down, setMouseState] = useState(false);
 
   /**
    * Move Dial event handler
    * @param e
    */
   const moveDial = e => {
-    if (mouseDown) {
+    if (down) {
       // Must complete this block....
+      console.log("Is this working?");
     } else {
       // Must complete this block....
     }
@@ -76,7 +78,7 @@ const CipherDial = props => {
    * Press Dial event handler
    */
   const pressDial = () => {
-    mouseDown = true;
+    setMouseState(true);
     const dial_button = document.getElementsByClassName("dial_button")[0];
     dial_button.addEventListener("mousemove", moveDial);
   };
@@ -85,28 +87,28 @@ const CipherDial = props => {
    * Release Dial event handler
    */
   const releaseDial = () => {
-    mouseDown = false;
+    setMouseState(false);
     const dial_button = document.getElementsByClassName("dial_button")[0];
     dial_button.removeEventListener("mousemove", moveDial);
   };
 
   return (
-    <svg class="cipher_dial">
+    <svg className="cipher_dial">
       <circle
         cx="150"
         cy="100"
         r="90"
         stroke="#333"
-        stroke-width="1"
+        strokeWidth="1"
         fill="#111"
       />
       <circle
-        class="dial_button"
+        className="dial_button"
         cx="150"
         cy="155"
         r="20"
         stroke="#333"
-        stroke-width="1"
+        strokeWidth="1"
         fill="#111"
         onMouseDown={pressDial}
         onMouseUp={releaseDial}
@@ -119,7 +121,7 @@ const CipherDial = props => {
  * Caesar Shift Amount Label
  */
 const ShiftAmount = props => {
-  return <h2 class="caesar_shift_amount">{props.shiftAmount}</h2>;
+  return <h2 className="caesar_shift_amount">{props.shiftAmount}</h2>;
 };
 
 /**
@@ -148,7 +150,7 @@ const typing = () => {
 const PlaintextBox = props => {
   return (
     <input
-      class="plaintext"
+      className="plaintext"
       type="text"
       placeholder="Enter text here, then turn the dial...."
       onKeyDown={typing}
@@ -161,7 +163,7 @@ const PlaintextBox = props => {
  * Ciphertext Output Label
  */
 const CiphertextOutput = props => {
-  return <p class="ciphertext">Ciphertext should appear here....</p>;
+  return <p className="ciphertext">Ciphertext should appear here....</p>;
 };
 
 /**
@@ -253,11 +255,11 @@ const IncrementButton = props => {
  */
 const CaesarCipherForm = props => {
   return (
-    <form class="caesar_cipher_form">
+    <form className="caesar_cipher_form">
       <h1>CAESAR SHIFT CIPHER</h1>
       <CipherDial />
       <br />
-      <div class="controls">
+      <div className="controls">
         <DecrementButton />
         <IncrementButton />
         <ShiftAmount shiftAmount={0} />
@@ -270,7 +272,7 @@ const CaesarCipherForm = props => {
 
 function App() {
   return (
-    <div class="caesar_cipher_container">
+    <div className="caesar_cipher_container">
       <CaesarCipherForm />
     </div>
   );
