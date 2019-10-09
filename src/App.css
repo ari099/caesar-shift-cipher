@@ -35,6 +35,12 @@ h5,
 h6 {
   color: white;
   font-family: "Segoe UI Semibold";
+  text-align: center;
+}
+
+/* Container for the Caesar Cipher Encryption Form */
+.caesar_cipher_container {
+  padding: 50px;
 }
 
 /* Caesar Cipher Encryption Form */
@@ -43,15 +49,15 @@ h6 {
   border-radius: 5px;
   padding: 50px;
   margin: 0 auto;
-  width: 300px;
+  width: 500px;
 }
 
 /* Cipher Dial Canvas */
 .cipher_dial {
-  /*   border: 1px solid #222; */
   border-radius: 2.5px;
   height: 200px;
   width: 100%;
+  /* border: 1px solid white; */
   display: block;
 }
 
@@ -64,7 +70,7 @@ h6 {
 
 /* Form Plaintext TextBox */
 .caesar_cipher_form input.plaintext {
-  width: 85%;
+  width: 91%;
   background: black;
   border: 2px solid #222;
   border-radius: 2.5px;
@@ -95,6 +101,7 @@ h6 {
   cursor: move;
 }
 
+/* Increment/Decrement Buttons */
 #decrement {
   float: left;
   background: black;
@@ -137,5 +144,5 @@ h6 {
 
 .controls {
   margin-bottom: 25px;
-  width: 300px;
+  width: 500px;
 }

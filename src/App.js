@@ -5,13 +5,13 @@ import CaesarCipherMachine from './CaesarCipherMachine';
 
 // Center of the dial
 const center = {
-  x: 150,
+  x: 250,
   y: 100
 }; // Center point....
 
 // Dial Button Coordinates
 const dialButtonCoord = {
-  x: 150,
+  x: 250,
   y: 155
 };
 
@@ -95,8 +95,8 @@ const CipherDial = props => {
   return (
     <svg className="cipher_dial">
       <circle
-        cx="150"
-        cy="100"
+        cx={center.x}
+        cy={center.y}
         r="90"
         stroke="#333"
         strokeWidth="1"
@@ -104,8 +104,8 @@ const CipherDial = props => {
       />
       <circle
         className="dial_button"
-        cx="150"
-        cy="155"
+        cx={dialButtonCoord.x}
+        cy={dialButtonCoord.y}
         r="20"
         stroke="#333"
         strokeWidth="1"
