@@ -46,7 +46,7 @@ const degrees = (value, limit) => {
  * Encrypt with the Caesar cipher
  * @param plaintext
  * @param n
- * @param ciphertext
+ * @returns ciphertext
  */
 const caesar_encrypt = (plaintext, n) => {
   let ccm = new CaesarCipherMachine(n);
@@ -55,6 +55,7 @@ const caesar_encrypt = (plaintext, n) => {
 
 /**
  * Cipher Dial Canvas
+ * @returns CipherDial
  */
 const CipherDial = props => {
   let mouseDown = false;
